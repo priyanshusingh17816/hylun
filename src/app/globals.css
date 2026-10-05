@@ -1,0 +1,353 @@
+@import "tailwindcss";
+
+/* ==========================================================
+   HYLUN DESIGN SYSTEM
+========================================================== */
+
+:root {
+
+  /* ==========================
+     COLORS
+  ========================== */
+
+  --background: #F8F4EF;
+  --surface: #F2ECE5;
+
+  --sage: #8D9586;
+  --sage-dark: #76806F;
+
+  --rose: #C77C8E;
+  --rose-dark: #B36678;
+
+  --burgundy: #7A2E45;
+
+ --gold: #B7925C;
+
+ --heading: #221E1C;
+ --text: #2F2A28;
+ --text-light: #6E6863;
+
+ --border: #DDD3C8;
+
+ --shadow: rgba(34, 30, 28, 0.12);
+
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 32px;
+  --radius-xl: 40px;
+
+}
+
+/* ==========================================================
+   RESET
+========================================================== */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  font-family: var(--font-inter), sans-serif;
+  overflow-x: hidden;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* ==========================================================
+   TYPOGRAPHY
+========================================================== */
+
+h1,
+h2,
+h3,
+.hero-title {
+  font-family: var(--font-cormorant), serif;
+}
+
+.hero-title {
+  font-family: var(--font-cormorant), serif;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+/* ==========================================================
+   CONTAINER
+========================================================== */
+
+.container-custom {
+  width: 100%;
+  max-width: 1320px;
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+@media (max-width: 768px) {
+  .container-custom {
+    padding-inline: 1.25rem;
+  }
+}
+
+/* ==========================================================
+   COLORS
+========================================================== */
+
+.bg-brand {
+  background: var(--background);
+}
+
+.bg-surface {
+  background: var(--surface);
+}
+
+.bg-sage {
+  background: var(--sage);
+}
+
+.bg-rose {
+  background: var(--rose);
+}
+
+.bg-burgundy {
+  background: var(--burgundy);
+}
+
+.text-heading {
+  color: var(--heading);
+}
+
+.text-brand {
+  color: var(--text);
+}
+
+.text-muted {
+  color: var(--text-light);
+}
+
+.text-sage {
+  color: var(--sage);
+}
+
+.text-rose {
+  color: var(--rose);
+}
+
+.text-burgundy {
+  color: var(--burgundy);
+}
+
+.border-brand {
+  border-color: var(--border);
+}
+
+/* ==========================================================
+   BUTTONS
+========================================================== */
+
+.btn-primary {
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 15px 34px;
+
+  border-radius: 999px;
+
+  background: var(--rose);
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  transition: all .35s ease;
+
+}
+
+.btn-primary:hover {
+
+  background: var(--rose-dark);
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 12px 28px rgba(199, 124, 142, .28);
+
+}
+
+.btn-secondary {
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 15px 34px;
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,.55);
+
+  backdrop-filter: blur(10px);
+
+  border: 1px solid var(--border);
+
+  color: var(--burgundy);
+
+  font-size: 14px;
+  font-weight: 500;
+
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  transition: all .35s ease;
+
+}
+
+.btn-secondary:hover {
+
+  background: var(--burgundy);
+
+  color: white;
+
+  transform: translateY(-2px);
+
+}
+
+/* ==========================================================
+   SECTION
+========================================================== */
+
+.section {
+  padding: 100px 0;
+}
+
+/* ==========================================================
+   CARDS
+========================================================== */
+
+.card {
+
+  background: white;
+
+  border-radius: var(--radius-lg);
+
+  transition: .35s ease;
+
+  overflow: hidden;
+
+}
+
+.card:hover {
+
+  transform: translateY(-8px);
+
+  box-shadow: 0 20px 50px var(--shadow);
+
+}
+
+/* ==========================================================
+   GLASS
+========================================================== */
+
+.glass {
+
+  background: rgba(255,255,255,.72);
+
+  backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255,255,255,.35);
+
+}
+
+/* ==========================================================
+   UTILITIES
+========================================================== */
+
+.transition-default {
+  transition: all .35s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+.shadow-soft {
+  box-shadow: 0 12px 35px var(--shadow);
+}
+
+.rounded-brand {
+  border-radius: var(--radius-lg);
+}
+
+/* ==========================================================
+   SELECTION
+========================================================== */
+
+::selection {
+  background: var(--rose);
+  color: white;
+}
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--sage);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sage-dark);
+}
